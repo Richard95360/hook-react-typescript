@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {FunctionComponent} from 'react';
 
-function App() {
+import './App.css';
+import CustomHookComponent from './CustomHookComponent';
+import UseContextComponent from './UseContextComponent';
+import UseEffectComponent from './UseEffectComponent';
+import UsereducerComponent from './UsereducerComponent';
+import UseRefComponent from './UseRefComponent';
+import UseStateComponent from './UseStateComponent';
+
+import EvenMoreReactComponent from './EvenMoreReactComponent';
+
+const App : FunctionComponent = (props) => {
+
+  /* const [firstName, setFirstName] = useState<string>('');
+  const [lastName, setLastName] = useState<string>('');
+ */
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Even more React component TS stuff</h1>
+      <EvenMoreReactComponent/>
+      <h1>useCustom</h1>
+      <CustomHookComponent />
+      <h1>useRef</h1>
+      <UseRefComponent/>
+    <h1>useReducer</h1>
+    <UsereducerComponent/>
+    <h1>UseState</h1>
+   <UseStateComponent />
+   <h1>UseEffect</h1>
+   <UseEffectComponent />
+   <h1>UseContext</h1>
+   <UseContextComponent />
+     {/*  <input
+       type="text"
+       value={firstName}
+       onChange={e => setFirstName(e.target.value)}
+        />
+         <input
+       type="text"
+       value={lastName}
+       onChange={e => setLastName(e.target.value,)}
+        />
+        <div>{firstName} {lastName}</div> */}
     </div>
   );
 }
